@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>簡單倒數 隱私權政策</title>
+  <meta name="description" content="簡單倒數 App 的隱私權政策頁面。">
+  <style>
+    :root {
+      --bg-start: #f6e8dc;
+      --bg-mid: #e7eef3;
+      --bg-end: #f7ddd2;
+      --card-bg: rgba(255, 255, 255, 0.72);
+      --card-border: rgba(255, 255, 255, 0.82);
+      --text-primary: #16263a;
+      --text-secondary: #5b6976;
+      --accent: #1d3557;
+      --accent-soft: #4e7b6d;
+      --shadow: rgba(29, 53, 87, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "SF Pro TC", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      color: var(--text-primary);
+      background:
+        radial-gradient(circle at 18% 12%, rgba(255, 255, 255, 0.78), transparent 30%),
+        radial-gradient(circle at 82% 78%, rgba(224, 122, 95, 0.18), transparent 28%),
+        linear-gradient(135deg, var(--bg-start), var(--bg-mid) 52%, var(--bg-end));
+      padding: 24px;
+    }
+
+    .shell {
+      width: min(100%, 920px);
+      margin: 0 auto;
+      display: grid;
+      gap: 20px;
+    }
+
+    .hero,
+    .card {
+      border-radius: 32px;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 20px 48px var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero {
+      padding: 30px;
+      color: #fff;
+      background:
+        radial-gradient(circle at 78% 34%, rgba(255, 255, 255, 0.16), transparent 22%),
+        linear-gradient(135deg, var(--accent), var(--accent-soft));
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      opacity: 0.82;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 6vw, 3.6rem);
+      line-height: 1.04;
+      letter-spacing: -0.04em;
+    }
+
+    .subtitle {
+      margin: 14px 0 0;
+      max-width: 42rem;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    .card {
+      padding: 28px;
+      background: var(--card-bg);
+      backdrop-filter: blur(18px);
+    }
+
+    .meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.58);
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .intro {
+      margin: 18px 0 0;
+      font-size: 1.02rem;
+      line-height: 1.85;
+      color: var(--text-secondary);
+    }
+
+    .sections {
+      display: grid;
+      gap: 16px;
+    }
+
+    .section {
+      padding: 22px 22px 20px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.66);
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.08rem;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--text-secondary);
+    }
+
+    .footer {
+      margin-top: 8px;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--text-secondary);
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 16px;
+      }
+
+      .hero,
+      .card {
+        border-radius: 26px;
+      }
+
+      .hero,
+      .card {
+        padding: 22px;
+      }
+
+      .section {
+        border-radius: 20px;
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">簡單倒數</p>
+      <h1>隱私權政策</h1>
+      <p class="subtitle">
+        本政策說明「簡單倒數」如何處理你的資料。現行版本以本機儲存為主，
+        不需要登入，也不會將你的倒數內容上傳到遠端伺服器。
+      </p>
+    </section>
+
+    <section class="card">
+      <div class="meta">生效日期：2026 年 3 月 27 日</div>
+      <p class="intro">
+        「簡單倒數」重視你的隱私。你在 App 內建立的事件、備註、日期與提醒設定，
+        主要用來提供倒數顯示、小工具同步與本機通知提醒功能。除非未來功能另有說明，
+        否則這些資料不會被上傳、販售或分享給第三方。
+      </p>
+    </section>
+
+    <section class="sections">
+      <article class="section">
+        <h2>1. 我們會儲存哪些資料</h2>
+        <p>
+          App 會在你的裝置上儲存你建立的事件資料，包括標題、備註、日期、顏色、
+          圖示、重複設定與提醒設定。這些資料只用於提供倒數與提醒功能。
+        </p>
+      </article>
+
+      <article class="section">
+        <h2>2. 資料儲存方式</h2>
+        <p>
+          目前版本的資料會保存在你的裝置本機。如果你使用小工具，系統會在 App 與
+          小工具之間共享同一份本機資料，讓最近的倒數內容可以正常顯示。
+        </p>
+      </article>
+
+      <article class="section">
+        <h2>3. 通知與提醒</h2>
+        <p>
+          當你開啟提醒功能時，通知排程會由 iOS 在你的裝置上建立。App 不會把提醒資料
+          傳送到外部伺服器，也不會透過遠端推播服務儲存你的事件內容。
+        </p>
+      </article>
+
+      <article class="section">
+        <h2>4. 第三方服務與資料蒐集</h2>
+        <p>
+          目前版本不需要註冊帳號，也不會透過分析工具、廣告追蹤器或第三方服務來蒐集
+          你的使用行為。App 不會販售、出租或交換你的個人資料。
+        </p>
+      </article>
+
+      <article class="section">
+        <h2>5. 隱私權政策更新</h2>
+        <p>
+          如果未來版本加入雲端同步、帳號系統、使用分析，或任何新的資料分享功能，
+          我們會在功能啟用前更新本政策，並將最新版本公布於此頁面。
+        </p>
+      </article>
+    </section>
+
+    <section class="card">
+      <p class="footer">
+        若你要將本頁作為 App Store Connect 的 Privacy Policy URL，
+        可直接部署到 GitHub Pages 後使用該網址。
+      </p>
+    </section>
+  </main>
+</body>
+</html>
