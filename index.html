@@ -132,6 +132,21 @@
       color: var(--text-secondary);
     }
 
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-block {
+      display: grid;
+      gap: 6px;
+    }
+
     .footer {
       margin-top: 8px;
       font-size: 0.95rem;
@@ -167,8 +182,8 @@
       <p class="eyebrow">簡單倒數</p>
       <h1>隱私權政策</h1>
       <p class="subtitle">
-        本政策說明「簡單倒數」如何處理你的資料。現行版本以本機儲存為主，
-        不需要登入，也不會將你的倒數內容上傳到遠端伺服器。
+        本政策說明「簡單倒數」如何保護你的資料。你建立的倒數、備註與提醒設定
+        會保留在你的裝置上，除非為了提供你正在使用的功能，否則不會分享給第三方。
       </p>
     </section>
 
@@ -176,8 +191,8 @@
       <div class="meta">生效日期：2026 年 3 月 27 日</div>
       <p class="intro">
         「簡單倒數」重視你的隱私。你在 App 內建立的事件、備註、日期與提醒設定，
-        主要用來提供倒數顯示、小工具同步與本機通知提醒功能。除非未來功能另有說明，
-        否則這些資料不會被上傳、販售或分享給第三方。
+        只會用來提供倒數顯示、小工具同步與提醒通知等功能。我們不會販售你的資料，
+        也不會在未經說明的情況下將資料提供給第三方。
       </p>
     </section>
 
@@ -193,40 +208,52 @@
       <article class="section">
         <h2>2. 資料儲存方式</h2>
         <p>
-          目前版本的資料會保存在你的裝置本機。如果你使用小工具，系統會在 App 與
-          小工具之間共享同一份本機資料，讓最近的倒數內容可以正常顯示。
+          你的資料會保存在你使用的裝置上。如果你有使用小工具，系統會讓 App 與
+          小工具讀取同一份資料，讓倒數內容可以一致顯示。
         </p>
       </article>
 
       <article class="section">
         <h2>3. 通知與提醒</h2>
         <p>
-          當你開啟提醒功能時，通知排程會由 iOS 在你的裝置上建立。App 不會把提醒資料
-          傳送到外部伺服器，也不會透過遠端推播服務儲存你的事件內容。
+          當你開啟提醒功能時，通知會由你的裝置建立與顯示。我們不會將提醒內容傳送到
+          外部服務，也不會另外儲存你的事件內容來發送通知。
         </p>
       </article>
 
       <article class="section">
         <h2>4. 第三方服務與資料蒐集</h2>
         <p>
-          目前版本不需要註冊帳號，也不會透過分析工具、廣告追蹤器或第三方服務來蒐集
-          你的使用行為。App 不會販售、出租或交換你的個人資料。
+          你不需要註冊帳號即可使用本 App。我們不會透過分析工具、廣告追蹤器或第三方
+          服務蒐集你的使用行為，也不會販售、出租或交換你的個人資料。
         </p>
       </article>
 
       <article class="section">
         <h2>5. 隱私權政策更新</h2>
         <p>
-          如果未來版本加入雲端同步、帳號系統、使用分析，或任何新的資料分享功能，
-          我們會在功能啟用前更新本政策，並將最新版本公布於此頁面。
+          如果未來的服務內容或資料處理方式有所調整，我們會更新本政策，並將最新版本
+          公布在這個頁面。
         </p>
+      </article>
+
+      <article class="section">
+        <h2>6. 聯絡方式</h2>
+        <div class="contact-block">
+          <p>若你對本政策有任何疑問，歡迎透過以下方式與我們聯絡：</p>
+          <p>Hung Hua Yu</p>
+          <p><a href="mailto:cat.cafe1982@icloud.com">cat.cafe1982@icloud.com</a></p>
+        </div>
       </article>
     </section>
 
     <section class="card">
       <p class="footer">
-        若你要將本頁作為 App Store Connect 的 Privacy Policy URL，
-        可直接部署到 GitHub Pages 後使用該網址。
+        本頁內容僅說明「簡單倒數」App 本身的資料處理方式；若您將本頁發布於 GitHub Pages，
+        GitHub 作為網站託管服務提供者，可能另有其平台層級的隱私政策與 Cookie 政策。
+      </p>
+      <p class="footer">
+        本政策最後更新於 2026 年 3 月 27 日。
       </p>
     </section>
   </main>
