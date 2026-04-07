@@ -1,277 +1,137 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>簡單倒數 隱私權政策</title>
-  <meta name="description" content="簡單倒數 App 的隱私權政策頁面。">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>簡單盤點｜隱私權政策</title>
+  <meta name="description" content="簡單盤點（Simple Stocktake）App 隱私權政策">
   <style>
     :root {
-      --bg-start: #f6e8dc;
-      --bg-mid: #e7eef3;
-      --bg-end: #f7ddd2;
-      --card-bg: rgba(255, 255, 255, 0.72);
-      --card-border: rgba(255, 255, 255, 0.82);
-      --text-primary: #16263a;
-      --text-secondary: #5b6976;
-      --accent: #1d3557;
-      --accent-soft: #4e7b6d;
-      --shadow: rgba(29, 53, 87, 0.14);
+      color-scheme: light dark;
+      --bg: #f6f7f9;
+      --fg: #1c1c1e;
+      --muted: #636366;
+      --card: #ffffff;
+      --border: rgba(0, 0, 0, 0.08);
+      --link: #0066cc;
     }
-
-    * {
-      box-sizing: border-box;
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1c1c1e;
+        --fg: #f5f5f7;
+        --muted: #aeaeb2;
+        --card: #2c2c2e;
+        --border: rgba(255, 255, 255, 0.12);
+        --link: #64b5f6;
+      }
     }
-
-    html {
-      min-height: 100%;
-      background-color: var(--bg-mid);
-    }
-
+    * { box-sizing: border-box; }
     body {
-      position: relative;
       margin: 0;
-      min-height: 100vh;
-      font-family: "SF Pro TC", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-      color: var(--text-primary);
-      background: transparent;
-      padding: 24px;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      pointer-events: none;
-      background:
-        radial-gradient(circle at 18% 12%, rgba(255, 255, 255, 0.78), transparent 30%),
-        radial-gradient(circle at 82% 78%, rgba(224, 122, 95, 0.18), transparent 28%),
-        linear-gradient(135deg, var(--bg-start), var(--bg-mid) 52%, var(--bg-end));
-      background-color: var(--bg-mid);
-    }
-
-    .shell {
-      width: min(100%, 920px);
-      margin: 0 auto;
-      display: grid;
-      gap: 20px;
-    }
-
-    .hero,
-    .card {
-      border-radius: 32px;
-      border: 1px solid var(--card-border);
-      box-shadow: 0 20px 48px var(--shadow);
-      overflow: hidden;
-    }
-
-    .hero {
-      padding: 30px;
-      color: #fff;
-      background:
-        radial-gradient(circle at 78% 34%, rgba(255, 255, 255, 0.16), transparent 22%),
-        linear-gradient(135deg, var(--accent), var(--accent-soft));
-    }
-
-    .eyebrow {
-      margin: 0 0 10px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      opacity: 0.82;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(2.2rem, 6vw, 3.6rem);
-      line-height: 1.04;
-      letter-spacing: -0.04em;
-    }
-
-    .subtitle {
-      margin: 14px 0 0;
-      max-width: 42rem;
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: rgba(255, 255, 255, 0.88);
-    }
-
-    .card {
-      padding: 28px;
-      background: var(--card-bg);
-      backdrop-filter: blur(18px);
-    }
-
-    .meta {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.58);
-      color: var(--text-secondary);
-      font-size: 0.95rem;
-      font-weight: 600;
-    }
-
-    .intro {
-      margin: 18px 0 0;
-      font-size: 1.02rem;
-      line-height: 1.85;
-      color: var(--text-secondary);
-    }
-
-    .sections {
-      display: grid;
-      gap: 16px;
-    }
-
-    .section {
-      padding: 22px 22px 20px;
-      border-radius: 24px;
-      background: rgba(255, 255, 255, 0.5);
-      border: 1px solid rgba(255, 255, 255, 0.66);
-    }
-
-    h2 {
-      margin: 0 0 10px;
-      font-size: 1.08rem;
-      font-weight: 800;
-      letter-spacing: 0.01em;
-    }
-
-    p {
-      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang TC", "Microsoft JhengHei", sans-serif;
       font-size: 1rem;
-      line-height: 1.8;
-      color: var(--text-secondary);
+      line-height: 1.65;
+      color: var(--fg);
+      background: var(--bg);
+      padding: 1.5rem 1rem 3rem;
     }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
+    .wrap { max-width: 40rem; margin: 0 auto; }
+    header {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 1.35rem;
       font-weight: 600;
+      margin: 0 0 0.35rem;
+      letter-spacing: -0.02em;
     }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .contact-block {
-      display: grid;
-      gap: 6px;
-    }
-
-    .footer {
-      margin-top: 8px;
+    .sub {
+      margin: 0;
+      color: var(--muted);
       font-size: 0.95rem;
-      line-height: 1.8;
-      color: var(--text-secondary);
     }
-
-    @media (max-width: 640px) {
-      body {
-        padding: 16px;
-      }
-
-      .hero,
-      .card {
-        border-radius: 26px;
-      }
-
-      .hero,
-      .card {
-        padding: 22px;
-      }
-
-      .section {
-        border-radius: 20px;
-        padding: 18px;
-      }
+    main {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.25rem 1.75rem;
+    }
+    h2 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin: 1.5rem 0 0.5rem;
+    }
+    h2:first-of-type { margin-top: 0; }
+    p { margin: 0.5rem 0; }
+    ul { margin: 0.5rem 0; padding-left: 1.25rem; }
+    li { margin: 0.25rem 0; }
+    a { color: var(--link); }
+    .meta { font-size: 0.9rem; color: var(--muted); margin-bottom: 1rem; }
+    .contact { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+    footer {
+      margin-top: 1.25rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
     }
   </style>
 </head>
 <body>
-  <main class="shell">
-    <section class="hero">
-      <p class="eyebrow">簡單倒數</p>
-      <h1>隱私權政策</h1>
-      <p class="subtitle">
-        本政策說明「簡單倒數」如何保護你的資料。你建立的倒數、備註與提醒設定
-        會保留在你的裝置上，除非為了提供你正在使用的功能，否則不會分享給第三方。
-      </p>
-    </section>
+  <div class="wrap">
+    <header>
+      <h1>簡單盤點（Simple Stocktake）</h1>
+      <p class="sub">隱私權政策 · Privacy Policy</p>
+    </header>
 
-    <section class="card">
-      <div class="meta">生效日期：2026 年 3 月 27 日</div>
-      <p class="intro">
-        「簡單倒數」重視你的隱私。你在 App 內建立的事件、備註、日期與提醒設定，
-        只會用來提供倒數顯示、小工具同步與提醒通知等功能。我們不會販售你的資料，
-        也不會在未經說明的情況下將資料提供給第三方。
-      </p>
-    </section>
+    <main>
+      <p class="meta">最後更新：2026 年 4 月 7 日</p>
 
-    <section class="sections">
-      <article class="section">
-        <h2>1. 我們會儲存哪些資料</h2>
-        <p>
-          App 會在你的裝置上儲存你建立的事件資料，包括標題、備註、日期、顏色、
-          圖示、重複設定與提醒設定。這些資料只用於提供倒數與提醒功能。
-        </p>
-      </article>
+      <p>本政策說明「簡單盤點」（以下稱本 App）如何處理您的資訊。使用本 App 即表示您同意本政策；若不同意，請停止使用本 App。</p>
 
-      <article class="section">
-        <h2>2. 資料儲存方式</h2>
-        <p>
-          你的資料會保存在你使用的裝置上。如果你有使用小工具，系統會讓 App 與
-          小工具讀取同一份資料，讓倒數內容可以一致顯示。
-        </p>
-      </article>
+      <h2>1. 資料控制者與聯絡方式</h2>
+      <p>與隱私相關之詢問，請寄信至：<a href="mailto:cat.cafe1982@icloud.com">cat.cafe1982@icloud.com</a></p>
 
-      <article class="section">
-        <h2>3. 通知與提醒</h2>
-        <p>
-          當你開啟提醒功能時，通知會由你的裝置建立與顯示。我們不會將提醒內容傳送到
-          外部服務，也不會另外儲存你的事件內容來發送通知。
-        </p>
-      </article>
+      <h2>2. 我們收集哪些資料</h2>
+      <p>本 App 主要處理您自行輸入或透過掃描產生的營運資料，例如（依您實際使用欄位而定）：料號、數量、站別、機台、備註、時間戳記、工令／LOT 等。這些內容儲存在您的裝置，並可能透過 Apple iCloud（CloudKit）與您的 Apple 帳號綁定之私有資料庫同步。</p>
 
-      <article class="section">
-        <h2>4. 第三方服務與資料蒐集</h2>
-        <p>
-          你不需要註冊帳號即可使用本 App。我們不會透過分析工具、廣告追蹤器或第三方
-          服務蒐集你的使用行為，也不會販售、出租或交換你的個人資料。
-        </p>
-      </article>
+      <h2>3. 相機</h2>
+      <p>本 App 會在您同意下使用相機以掃描條碼或 QR Code，目的為辨識條碼內容。我們不會基於行銷目的蒐集您的相片圖庫；若本 App 未設置開發者自有之帳號後端，即不會將相機畫面上傳至我們自有的伺服器。</p>
 
-      <article class="section">
-        <h2>5. 隱私權政策更新</h2>
-        <p>
-          如果未來的服務內容或資料處理方式有所調整，我們會更新本政策，並將最新版本
-          公布在這個頁面。
-        </p>
-      </article>
+      <h2>4. 第三方服務</h2>
+      <p>若您啟用 iCloud 同步，相關資料的儲存與傳輸受 Apple iCloud／CloudKit 條款與安全機制規範。除 Apple 提供之雲端同步基礎設施外，本政策所述版本之 App 若不整合其他第三方廣告或分析 SDK，即不依賴該等服務蒐集個人資料（若日後整合，我們將更新本政策與 App Store 上的隱私權標示）。</p>
 
-      <article class="section">
-        <h2>6. 聯絡方式</h2>
-        <div class="contact-block">
-          <p>若你對本政策有任何疑問，歡迎透過以下方式與我們聯絡：</p>
-          <p>Hung Hua Yu</p>
-          <p><a href="mailto:cat.cafe1982@icloud.com">cat.cafe1982@icloud.com</a></p>
-        </div>
-      </article>
-    </section>
+      <h2>5. 資料儲存地點與保存</h2>
+      <ul>
+        <li>裝置端：資料保存在您的 iPhone／iPad（或相容裝置）上。</li>
+        <li>iCloud：若您開啟同步，資料副本可能存在於 Apple 的 iCloud 服務。</li>
+      </ul>
+      <p>您可透過刪除本 App 內資料、或依 Apple 說明管理 iCloud 資料，來控制保存內容。</p>
 
-    <section class="card">
-      <p class="footer">
-        本頁內容僅說明「簡單倒數」App 本身的資料處理方式；若您將本頁發布於 GitHub Pages，
-        GitHub 作為網站託管服務提供者，可能另有其平台層級的隱私政策與 Cookie 政策。
-      </p>
-      <p class="footer">
-        本政策最後更新於 2026 年 3 月 27 日。
-      </p>
-    </section>
-  </main>
+      <h2>6. 資料分享</h2>
+      <p>我們不會出售您的個人資料。除下列情形外，我們不會對外分享您的資料：</p>
+      <ul>
+        <li>依法律、法規或政府機關之合法要求；</li>
+        <li>為保護使用者或公眾之安全、權利所必要且符合法令；</li>
+        <li>與 Apple 就 iCloud／App 分發所需之技術處理（資料仍主要存放在您的帳號與裝置脈絡下）。</li>
+      </ul>
+
+      <h2>7. 兒童隱私</h2>
+      <p>本 App 非專為兒童設計。若您為監護人並認為未成年人向我們提供了資訊，請寄信至上述信箱以便處理。</p>
+
+      <h2>8. 政策變更</h2>
+      <p>我們可能更新本政策。重大變更時，我們將於本頁更新「最後更新」日期，並視情況在 App 內或 App Store 說明。更新後繼續使用本 App，即視為您接受修訂內容。</p>
+
+      <div class="contact">
+        <p><strong>聯絡我們</strong><br>
+        <a href="mailto:cat.cafe1982@icloud.com">cat.cafe1982@icloud.com</a></p>
+      </div>
+    </main>
+
+    <footer>© 簡單盤點 Simple Stocktake</footer>
+  </div>
 </body>
 </html>
